@@ -5,7 +5,7 @@
 ##### Homepage link: [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli)
 
 | **Package source:** | Source Tarball | Binary | Git | Node | Gem |
-|:-------------------:|:--------------:|;------:|:---:|:----:|:---:|
+|:-------------------:|:--------------:|:------:|:---:|:----:|:---:|
 | **Status:**         |  -             | + <br> (default) |  -  |   –  |  –  |
 
 [Zplugin](https://github.com/zdharma/zplugin) can use the NPM package registry
