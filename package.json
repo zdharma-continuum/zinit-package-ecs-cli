@@ -41,7 +41,8 @@
             "user": "aws",
             "plugin": "amazon-ecs-cli",
             "url": "https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-${(M)OSTYPE#(linux|darwin)}-amd64-latest",
-            "version": "1.18.0"
+            "version": "1.18.1",
+            "message": "A snippet providing The Amazon ECS CLI, i.e.: the `ecs-cli' command."
         },
         "zplugin-ices": {
             "default": {
@@ -49,9 +50,8 @@
                 "lucid": "",
                 "as": "null",
                  "mv": "*latest -> ecs-cli",
-                 "atclone": "chmod +x *; cp ecs-cli $ZPFX/bin",
-                 "atpull": "%atclone",
-                 "sbin": "ecs-cli"
+                 "atclone": "chmod +x *; cp -vf ecs-cli $ZPFX/bin",
+                 "atpull": "%atclone"
             },
             "bgn": {
                 "is-snippet" : "",
