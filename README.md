@@ -4,9 +4,9 @@
 
 ##### Homepage link: [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli)
 
-| **Package source:** | Tarball | Git | Node | Gem |
-|:-------------------:|:-------:|:---:|:----:|:---:|
-| **Status:**         | + <br> (default) |  -  |   –  |  –  |
+| **Package source:** | Source Tarball | Binary | Git | Node | Gem |
+|:-------------------:|:--------------:|;------:|:---:|:----:|:---:|
+| **Status:**         |  -             | + <br> (default) |  -  |   –  |  –  |
 
 [Zplugin](https://github.com/zdharma/zplugin) can use the NPM package registry
 to automatically:
@@ -22,8 +22,24 @@ Example invocations that'll install
 [bin-gem-node](https://github.com/zplugin/z-a-bin-gem-node) annex:
 
 ```zsh
-# Download the Node package of amazon-ecs-cli
+# Download the binary of amazon-ecs-cli command
 zplugin pack for ecs-cli
+
+# Download the ecs-cli binary with use of the bin-gem-node annex
+zplugin pack"bgn" for ecs-cli
+```
+
+## Default Profile
+
+Provides the CLI command `ecs-cli` by coping it to `$ZPFX/bin`.
+
+The Zplugin command executed will be equivalent to:
+
+```zsh
+zplugin as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
+    atclone='chmod +x *; cp -vf ecs-cli $ZPFX/bin' \
+    atpull="%atclone" sbin="ecs-cli" is-snippet for \
+        https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-${(M)OSTYPE#(linux|darwin)}-amd64-latest
 ```
 
 ## bin-gem-node Profile
@@ -33,8 +49,9 @@ Provides the CLI command `ecs-cli`.
 The Zplugin command executed will be equivalent to:
 
 ```zsh
-zplugin as=null mv="*latest -> ecs-cli" atclone="chmod +x *"
-    atpull="%atclone" sbin="ecs-cli" is-snippet for \
+zplugin as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
+    atclone="chmod +x *"  atpull="%atclone" sbin="ecs-cli"
+    is-snippet for \
         https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-${(M)OSTYPE#(linux|darwin)}-amd64-latest
 ```
 
