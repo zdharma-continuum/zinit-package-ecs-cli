@@ -18,8 +18,7 @@ to automatically:
     - the ices can be selectively overriden.
 
 Example invocations that'll install
-[aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli) by using the
-[bin-gem-node](https://github.com/zplugin/z-a-bin-gem-node) annex:
+[aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli):
 
 ```zsh
 # Download the binary of amazon-ecs-cli command
@@ -44,7 +43,10 @@ zplugin as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
 
 ## bin-gem-node Profile
 
-Provides the CLI command `ecs-cli`.
+Provides the CLI command `ecs-cli` by creating a forwarder script (a *shim*) in
+`$ZPFX/bin` by using the
+[bin-gem-node](https://github.com/zplugin/z-a-bin-gem-node) annex. It's the best
+method of providing the binary to the command line.
 
 The Zplugin command executed will be equivalent to:
 
