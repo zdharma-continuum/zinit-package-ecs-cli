@@ -21,7 +21,7 @@
     "bugs": {
         "url": "https://github.com/aws/amazon-ecs-cli/issues"
     },
-    "version" : "1.18.0",
+    "version": "1.18.1",
     "contributors": [],
     "dependencies": {},
     "deprecated": false,
@@ -46,21 +46,21 @@
         },
         "zplugin-ices": {
             "default": {
-                "is-snippet" : "",
+                "is-snippet": "",
                 "lucid": "",
                 "as": "null",
-                 "mv": "*latest -> ecs-cli",
-                 "atclone": "chmod +x *; cp -vf ecs-cli $ZPFX/bin",
-                 "atpull": "%atclone"
+                "mv": "*latest -> ecs-cli",
+                "atclone": "chmod +x *; cp -vf ecs-cli $ZPFX/bin",
+                "atpull": "%atclone"
             },
             "bgn": {
-                "is-snippet" : "",
+                "is-snippet": "",
                 "lucid": "",
                 "as": "null",
-                 "mv": "*latest -> ecs-cli",
-                 "atclone": "chmod +x *",
-                 "atpull": "%atclone",
-                 "sbin": "ecs-cli"
+                "mv": "*latest -> ecs-cli",
+                "atclone": "chmod +x *",
+                "atpull": "%atclone",
+                "sbin": "ecs-cli"
             }
         }
     }
