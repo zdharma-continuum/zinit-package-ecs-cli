@@ -1,7 +1,5 @@
 # aws/amazon-ecs-cli as a Zsh package
 
-##### NPM link: [https://www.npmjs.com/package/zsh-ecs-cli](https://www.npmjs.com/package/zsh-ecs-cli)
-
 ##### Homepage link: [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli)
 
 | **Package source:** | Source Tarball | Binary | Git | Node | Gem |
