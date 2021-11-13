@@ -44,7 +44,7 @@
             "version": "1.18.1",
             "message": "A snippet providing The Amazon ECS CLI, i.e.: the `ecs-cli' command."
         },
-        "zplugin-ices": {
+        "zinit-ices": {
             "default": {
                 "is-snippet": "",
                 "lucid": "",
