@@ -1,3 +1,7 @@
+# Deprecated
+
+❗ All zinit-packages have been migrated to https://github.com/zdharma-continuum/zinit-packages
+You'll find the source for this here package in https://github.com/zdharma-continuum/zinit-packages/tree/HEAD/ecs-cli
 # aws/amazon-ecs-cli as a Zsh package
 
 ##### Homepage link: [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli)
